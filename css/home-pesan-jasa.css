@@ -1,0 +1,605 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+    text-transform: capitalize;
+    text-decoration: none;
+    user-select: none;
+}
+
+*:focus {
+    outline: none;
+}
+
+.home-pesan-jasa{
+    display: none;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    overflow: auto;
+    border-radius: 10px;
+    border: none;
+    background: green;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    top: 0;
+    z-index: 60;
+}
+
+.home-pesan-jasa::-webkit-scrollbar{
+    display: none;
+}
+
+.home-pesan-jasa.showHomePesanJasa{
+    display: grid;
+    animation-name: bukaHomePesanJasa;
+}
+
+@keyframes bukaHomePesanJasa{
+    0%{
+        height: 0;
+        transform: translateY(100%);
+    }
+
+    100%{
+        height: 100vh;
+        transform: translateY(0);
+    }
+}
+
+.home-pesan-jasa.backHomePesanJasa{
+    display: none;
+    animation-name: tutupHomePesanJasa;
+    animation-duration: 2s;
+}
+
+@keyframes tutupHomePesanJasa{
+    0%{
+        height: 100vh;
+        transform: translateY(0);
+    }
+
+    100%{
+        height: 0;
+        transform: translateY(100%);
+    }
+}
+
+.bt-close-home-pesan-jasa{
+    display: grid;
+    justify-content: right;
+    align-items: center;
+    text-align: right;
+    width: 100%;
+    bottom: 0;
+    border: none;
+    background: transparent;
+    right: 20px;
+    padding: 10px;
+    position: relative;
+}
+
+.bt-close-home-pesan-jasa button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #070021;
+    border-radius: 15px;
+    position: relative;
+    transition: .6s ease;
+    font-size: 2rem;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border: none;
+}
+
+.bt-close-home-pesan-jasa button:hover,
+.bt-close-home-pesan-jasa button:focus{
+    background: #1d0085;
+}
+
+.container-pesan-jasa{
+    display: grid;
+    gap: 50px;
+    position: relative;
+    justify-content: center;
+    border: none;
+    align-items: start;
+    background: transparent;
+    width: 100%;
+    transform: translateY(100px);
+}
+
+.header-pesan-jasa{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    top: 0;
+    z-index: 10;
+    gap: 10px;
+    position: fixed;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    background: #00ce00;
+    width: 100%;
+}
+
+.header-pesan-jasa h2,
+.header-pesan-jasa img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    border: none;
+}
+
+.header-pesan-jasa h2{
+    color: white;
+}
+
+.header-pesan-jasa img{
+    width: 60px;
+    height: 60px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+}
+
+.form-ac{
+    display: grid;
+    width: 100%;
+    position: relative;
+    gap: 20px;
+    border: none;
+    background: white;
+    align-items: center;
+    padding: 10px;
+    border-radius: 12px;
+    animation-fill-mode: forwards;
+}
+
+.form-ac.showFormAc{
+    display: grid;
+    animation-duration: 1.5s;
+    animation-name: bukaFormAc;
+}
+
+@keyframes bukaFormAc{
+    0%{
+        opacity: 0.5;
+        transform: translateY(100%);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.form-service{
+    display: grid;
+    width: 100%;
+    position: relative;
+    gap: 20px;
+    border: none;
+    background: white;
+    align-items: center;
+    padding: 10px;
+    border-radius: 12px;
+}
+
+.form-service.showFormService{
+    display: grid;
+    animation-duration: 1.5s;
+    animation-name: bukaFormService;
+}
+
+@keyframes bukaFormService{
+    0%{
+        opacity: 0.5;
+        transform: translateY(100%);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.box-h2-form-ac{
+    display: grid;
+    align-items: center;
+    border: none;
+    background: transparent;
+    width: 100%;
+    position: relative;
+}
+
+.box-h2-form-service{
+    display: grid;
+    align-items: center;
+    border: none;
+    background: transparent;
+    width: 100%;
+    position: relative;
+}
+
+.h2-form-ac{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    border-radius: 10px;
+    padding: 5px;
+    border: none;
+    background: #1ac600;
+}
+
+.h2-form-service{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    border-radius: 10px;
+    padding: 5px;
+    border: none;
+    background: #1ac600;
+}
+
+.h2-form-ac h2{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    position: relative;
+    border: none;
+    width: 100%;
+    background: transparent;
+    color: white;
+}
+
+.h2-form-service h2{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    position: relative;
+    border: none;
+    width: 100%;
+    background: transparent;
+    color: white;
+}
+
+.h2-form-ac img{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border: none;
+    width: 50px;
+    height: 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    background: transparent;
+}
+
+.h2-form-service img{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border: none;
+    width: 50px;
+    height: 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    background: transparent;
+}
+
+.box-pesan-jasa{
+    display: grid;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    position: relative;
+    gap: 10px;
+    width: 100%;
+    border: none;
+    background: transparent;
+}
+
+.box-pesan-jasa label{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    cursor: pointer;
+    gap: 10px;
+    color: black;
+    position: relative;
+    background: transparent;
+}
+
+.box-pesan-jasa .input-radio{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 35px;
+    height: 35px;
+    position: relative;
+    border: none;
+}
+
+.box-text-jasa-ac{
+    display: grid;
+    width: 100%;
+    align-items: center;
+    position: relative;
+    border: none;
+    background: transparent;
+    gap: 10px;
+}
+
+.box-text-jasa-service{
+    display: grid;
+    width: 100%;
+    align-items: center;
+    position: relative;
+    border: none;
+    background: transparent;
+    gap: 10px;
+}
+
+.container-input-jasa-ac{
+    display: flex;
+    align-items: center;
+    text-align: left;
+    width: 100%;
+    position: relative;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    background: #c3c3c3;
+    transition: .5s ease;
+}
+
+.container-input-jasa-service{
+    display: flex;
+    align-items: center;
+    text-align: left;
+    width: 100%;
+    position: relative;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    background: #c3c3c3;
+    transition: .5s ease;
+}
+
+.container-input-jasa-ac:hover,
+.container-input-jasa-ac:focus{
+    background: #a2a2a2;
+}
+
+.container-input-jasa-service:hover,
+.container-input-jasa-service:focus{
+    background: #a2a2a2;
+}
+
+.container-input-jasa-ac .label{
+    align-items: center;
+    display: flex;
+    position: relative;
+    color: black;
+    background: transparent;
+    text-align: left;
+    border: none;
+}
+
+.container-input-jasa-service .label{
+    align-items: center;
+    display: flex;
+    position: relative;
+    color: black;
+    background: transparent;
+    text-align: left;
+    border: none;
+}
+
+.label-1{
+    width: 56%;
+}
+
+.label-2{
+    width: 20%;
+}
+
+.label-3{
+    width: 30%;
+}
+
+.label-4{
+    width: 64%;
+}
+
+.container-input-jasa-service .label-1{
+    width: 40%;
+}
+
+.container-input-jasa-service .label-2{
+    width: 56%;
+}
+
+.container-input-jasa-service .label-3{
+    width: 20%;
+}
+
+.container-input-jasa-service .label-4{
+    width: 30%;
+}
+
+.container-input-jasa-service .label-5{
+    width: 64%;
+}
+
+.container-input-jasa-ac .text-jasa-ac{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 5px;
+    position: relative;
+    background: transparent;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.container-input-jasa-service .text-jasa-service{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 5px;
+    position: relative;
+    background: transparent;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.text-jasa-ac::placeholder{
+    text-align: right;
+    display: flex;
+    justify-content: right;
+    background: transparent;
+    border: none;
+    color: red;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+.text-jasa-service::placeholder{
+    text-align: right;
+    display: flex;
+    justify-content: right;
+    background: transparent;
+    border: none;
+    color: red;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+.nomer::-webkit-inner-spin-button,
+.nomer::-webkit-outer-spin-button{
+    display: none;
+    -webkit-appearance: none;
+}
+
+.box-submit-ac{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    justify-content: right;
+    align-items: center;
+    text-align: right;
+    position: relative;
+    border: none;
+    background: transparent;
+    padding: 10px;
+}
+
+.box-submit-ac button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2rem;
+    width: 60px;
+    height: 60px;
+    color: white;
+    position: relative;
+    border: none;
+    background: green;
+    border-radius: 15px;
+    transition: .6s ease;
+}
+
+.box-submit-ac button:hover,
+.box-submit-ac button:focus
+ {
+    background: #004600;
+}
+
+@media screen and (max-width: 768px) {
+    .form-ac{
+        width: 100%;
+    }
+
+    .label-1{
+        width: 82%;
+    }
+    
+    .label-2{
+        width: 32%;
+    }
+    
+    .label-3{
+        width: 40%;
+    }
+    
+    .label-4{
+        width: 95%;
+    }
+
+    .form-service{
+        width: 100%;
+    }
+
+    .container-input-jasa-service .label-1{
+        width: 50%;
+    }
+
+    .container-input-jasa-service .label-2{
+        width: 82%;
+    }
+    
+    .container-input-jasa-service .label-3{
+        width: 32%;
+    }
+    
+    .container-input-jasa-service .label-4{
+        width: 40%;
+    }
+    
+    .container-input-jasa-service .label-5{
+        width: 95%;
+    }
+}

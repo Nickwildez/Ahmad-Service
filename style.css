@@ -1,0 +1,889 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+    text-transform: capitalize;
+    text-decoration: none;
+    user-select: none;
+}
+
+*:focus {
+    outline: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    box-sizing: border-box;
+    background: linear-gradient(to bottom, #0b0033, #0e0041, #11004e, #14005a, #210047, #28005c);
+}
+
+.header-top {
+    display: none;
+    width: 100%;
+    justify-content: space-between;
+    align-items: start;
+    padding: 10px;
+    position: fixed;
+    height: 12%;
+    z-index: 40;
+    border-radius: 0 0 15px 15px;
+    background: #11004e;
+    box-shadow: 0 1px 2px 1px white;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.header-top.showHeaderTop{
+    display: flex;
+    animation-name: bukaHeaderTop;
+}
+
+@keyframes bukaHeaderTop{
+    0%{
+        opacity: 0;
+        height: 0;
+    }
+
+    100%{
+        opacity: 1;
+        height: 12%;
+    }
+}
+
+.header-top.backHeaderTop{
+    opacity: 1;
+    animation-name: tutupHeaderTop;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes tutupHeaderTop{
+    0%{
+        opacity: 1;
+        height: 12%;
+    }
+
+    100%{
+        opacity: 0;
+        height: 0;
+    }
+}
+
+.container-top-header {
+    display: grid;
+    align-items: center;
+    justify-content: left;
+    width: 100%;
+    border: none;
+    background: transparent;
+    position: relative;
+}
+
+.text-header {
+    display: grid;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    position: relative;
+    border: none;
+    background: transparent;
+}
+
+.text-header i {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    text-align: left;
+    border: none;
+    background: transparent;
+    color: white;
+    position: relative;
+    font-size: 1rem;
+}
+
+.text-header .h2-typing {
+    display: grid;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    border: none;
+    position: relative;
+    background: transparent;
+}
+
+.h2-typing h2 {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    font-size: 1.4rem;
+    font-weight: 550;
+    color: white;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    border-right: 3px solid white;
+    animation: typingH2 5s steps(26) infinite alternate,
+        cursorH2 .3s step-end infinite alternate;
+}
+
+@keyframes typingH2{
+    0% {
+        width: 0;
+    }
+    90% {
+        width: 100%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes cursorH2{
+    50%{
+        border-color: transparent;
+    }
+}
+
+.home-pembukaan {
+    display: grid;
+    position: absolute;
+    top: 0;
+    align-items: center;
+    width: 100%;
+    z-index: 50;
+    position: relative;
+    background: linear-gradient(to bottom, #0b0033, #0e0041, #11004e, #14005a, #210047, #28005c);
+    min-height: 100vh;
+    border: none;
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
+}
+
+.home-pembukaan.hidden {
+    display: none;
+    animation-name: hapusPembukaan;
+}
+
+@keyframes hapusPembukaan {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+
+.container-pembukaan {
+    display: grid;
+    border: none;
+    position: relative;
+    align-items: center;
+    background: transparent;
+    width: 100%;
+}
+
+.box-h-pembukaan {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border: none;
+    width: 100%;
+    background: transparent;
+}
+
+.h1-pembukaan {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border: none;
+    background: transparent;
+    width: 100%;
+}
+
+.h1-pembukaan h1 {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    font-size: 2rem;
+    color: white;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    border-right: 3px solid white;
+    animation: typing 3s steps(14),
+        cursor .3s step-end infinite alternate;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+@keyframes cursor {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.h2-pembukaan {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    border: none;
+    background: transparent;
+}
+
+.h2-pembukaan h2 {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    font-size: 1.5rem;
+    color: white;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    animation: typing 2s steps(17),
+        cursor2 .5s step-end infinite alternate;
+}
+
+.home-pembukaan-2 {
+    display: grid;
+    align-items: end;
+    width: 100%;
+    border-radius: 10px;
+    min-height: 100vh;
+    position: absolute;
+    z-index: 45;
+    overflow: hidden;
+    top: 0;
+    border: none;
+    border-radius: 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    background-size: cover;
+    background-image: url("image/home-electronic.jpg");
+}
+
+.home-pembukaan-2.clearPembukaan2 {
+    display: none;
+    animation: hapusPembukaan2 2s forwards;
+}
+
+@keyframes hapusPembukaan2 {
+    0% {
+        transform: translateX(0px);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.home-pembukaan-2::before {
+    content: "";
+    width: 100%;
+    min-height: 100vh;
+    position: absolute;
+    top: 0;
+    background: #0000005d;
+}
+
+.container-pembukaan-2 {
+    display: grid;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border: none;
+    width: 100%;
+    background: transparent;
+    padding: 10px;
+}
+
+.box-h-pembukaan-2 {
+    display: block;
+    justify-content: left;
+    align-items: center;
+    position: relative;
+    border: none;
+    background: #3b0088c5;
+    backdrop-filter: blur(5px);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.box-h-pembukaan-2 h1,
+.box-h-pembukaan-2 h2,
+.box-h-pembukaan-2 p {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    position: relative;
+    border: none;
+    background: transparent;
+    color: white;
+}
+
+.box-h-pembukaan-2 h1 {
+    font-size: 2rem;
+}
+
+.box-h-pembukaan-2 h2 {
+    font-size: 1.5rem;
+}
+
+.box-h-pembukaan-2 p {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.box-h-pembukaan-2,
+.box-bt-pembukaan-2 {
+    transform: translateY(-50px);
+}
+
+.box-bt-pembukaan-2 {
+    z-index: 1;
+    display: grid;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    border: none;
+    width: 100%;
+    background: transparent;
+}
+
+.box-bt-pembukaan-2 #button-clear-pembukaan2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    padding: 10px;
+    color: white;
+    background: #3b0088;
+    font-size: 2rem;
+    transition: .6s ease;
+    border-radius: 10px;
+}
+
+.box-bt-pembukaan-2 #button-clear-pembukaan2:hover,
+.box-bt-pembukaan-2 #button-clear-pembukaan2:focus {
+    background: #2e006a;
+}
+
+.home-page-begining {
+    display: none;
+    width: 100%;
+    align-items: center;
+    position: relative;
+    min-height: 115vh;
+    border: none;
+    background: transparent;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.home-page-begining.ShowHome {
+    display: grid;
+    animation-name: bukaHome;
+}
+
+@keyframes bukaHome {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container-homePage-begining {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    border: none;
+    background-color: transparent;
+    padding: 10px;
+}
+
+.h2-home-page-begining {
+    display: grid;
+    justify-content: left;
+    align-items: center;
+    position: relative;
+    border: none;
+    width: 100%;
+    background: transparent;
+}
+
+.h2-home-page-begining h2 {
+    display: flex;
+    width: 100%;
+    color: white;
+    padding: 10px;
+    text-shadow: 0 1px 2px 1px white;
+    border: none;
+    font-size: 2rem;
+    background: transparent;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+}
+
+.h2-home-page-begining h2::before {
+    content: "";
+    position: absolute;
+    border-radius: 10px;
+    border-bottom: 5px solid white;
+    display: flex;
+    bottom: 0;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    width: 40%;
+}
+
+.box-information {
+    display: none;
+    justify-content: center;
+    align-items: start;
+    width: 100%;
+    position: relative;
+    padding: 10px;
+    gap: 20px;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.box-information.showButtonInformation {
+    display: grid;
+    animation-name: bukaBoxInformation;
+}
+
+@keyframes bukaBoxInformation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.box-information.showButtonInformation .bt-information {
+    opacity: 0;
+    animation-duration: .8s;
+    animation-fill-mode: forwards;
+    animation-name: buttonSlideIn;
+}
+
+.box-information.showButtonInformation .bt-information:nth-child(1) {
+    animation-delay: .2s;
+}
+
+.box-information.showButtonInformation .bt-information:nth-child(2) {
+    animation-delay: .4s;
+}
+
+.box-information.showButtonInformation .bt-information:nth-child(3) {
+    animation-delay: .6s;
+}
+
+.box-information.showButtonInformation .bt-information:nth-child(4) {
+    animation-delay: .8s;
+}
+
+@keyframes buttonSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.bt-information {
+    display: grid;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    position: relative;
+    border: none;
+    border-radius: 10px;
+    transition: .5s ease;
+}
+
+.bt-information .container-bt-p-img p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    border: none;
+    background: transparent;
+}
+
+.cuci-ac {
+    background: #ffffff;
+    border: none;
+}
+
+.cuci-ac .container-bt-p-img p {
+    color: black;
+    border-bottom: 3px solid black;
+}
+
+.cuci-ac:hover,
+.cuci-ac:focus {
+    background: #ffffff73;
+}
+
+.service {
+    background: #ff0000;
+    border: none;
+}
+
+.service .container-bt-p-img p {
+    color: white;
+    border-bottom: 3px solid white;
+}
+
+.service:hover,
+.service:focus {
+    background: #ff000073;
+}
+
+.sewa-sound {
+    background: #0061a1;
+    border: none;
+}
+
+.sewa-sound .container-bt-p-img p {
+    color: white;
+    border-bottom: 3px solid white;
+}
+
+.sewa-sound:hover,
+.sewa-sound:focus {
+    background: #0061a173;
+}
+
+.pesan-jasa {
+    background: #00dd00;
+}
+
+.pesan-jasa .container-bt-p-img p {
+    color: white;
+    border-bottom: 3px solid white;
+}
+
+.pesan-jasa:hover,
+.pesan-jasa:focus {
+    background: #00dd0073;
+}
+
+.container-bt-p-img {
+    display: grid;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    gap: 10px;
+    border: none;
+    background: transparent;
+}
+
+.container-bt-p-img p {
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: black;
+    font-size: 2rem;
+    position: relative;
+    font-weight: 500;
+    border: none;
+    border-bottom: 3px solid black;
+}
+
+.box-img-begining {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border: none;
+    position: relative;
+    background: transparent;
+}
+
+.box-img-begining img {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background: transparent;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+    width: 70px;
+    height: 70px;
+    color: white;
+    border: none;
+    position: relative;
+}
+
+.tabel-jadwal-kerja {
+    display: none;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    border: none;
+    background: transparent;
+    padding: 10px;
+    animation-duration: .6s;
+    animation-fill-mode: forwards;
+}
+
+.tabel-jadwal-kerja.showTableKerja {
+    display: grid;
+    animation-name: bukaTableKerja;
+}
+
+@keyframes bukaTableKerja {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container-tabel-jadwal {
+    width: 100%;
+    display: grid;
+    align-items: center;
+    position: relative;
+    border-radius: 15px;
+    border: none;
+    background: #ececec;
+    box-shadow: 0 0 6px 1px #000000a9;
+}
+
+.h2-tabel {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    position: relative;
+    border: none;
+}
+
+.h2-tabel h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    border: none;
+    background: transparent;
+    color: #0b0033;
+}
+
+.box-tabel {
+    display: grid;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    border: none;
+    padding: 10px;
+    background: transparent;
+}
+
+.table-jam-kerja {
+    display: grid;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-collapse: collapse;
+    background: transparent;
+}
+
+th {
+    position: relative;
+    color: white;
+    background: #0061a1;
+}
+
+th,
+td {
+    border: 3px solid #0e0041;
+    position: relative;
+    text-align: center;
+    width: 500px;
+    font-size: 1.5rem;
+    padding: 15px;
+    text-align: center;
+}
+
+td {
+    transition: .6s ease;
+    position: relative;
+}
+
+td:hover,
+td:focus {
+    background: #afafaf;
+}
+
+.home-footer{
+    display: none;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    border: none;
+    background: transparent;
+    padding: 5px;
+}
+
+.home-footer.showHomeFooter{
+    display: grid;
+}
+
+.container-footer{
+    display: grid;
+    gap: 30px;
+    align-items: center;
+    width: 100%;
+    border: none;
+    background: transparent;
+    position: relative;
+}
+
+.box-text-footer{
+    display: grid;
+    justify-content: left;
+    text-align: left;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    position: relative;
+    border: none;
+    border-right: 3px solid white;
+    border-left: 3px solid white;
+    background: transparent;
+}
+
+.box-text-footer h2{
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    align-items: center;
+    position: relative;
+    background: transparent;
+    color: white;
+    border: none;
+    width: 70%;
+}
+
+.box-text-footer p{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    text-align: left;
+    position: relative;
+    border: none;
+    background: transparent;
+    color: white;
+}
+
+.box-name-dev{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 10px;
+    text-align: left;
+    position: relative;
+    border: none;
+    padding: 10px;
+    border-right: 3px solid white;
+    border-left: 3px solid white;
+    background: transparent;
+}
+
+.box-name-dev h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    position: relative;
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.box-name-dev i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    position: relative;
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+    h1-pembukaan h1 {
+        font-size: 2.2rem;
+    }
+
+    h2-pembukaan h2 {
+        font-size: 2rem;
+    }
+}

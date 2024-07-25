@@ -1,0 +1,407 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+    text-transform: capitalize;
+    text-decoration: none;
+    user-select: none;
+}
+
+*:focus {
+    outline: none;
+}
+
+.home-service{
+    display: none;
+    align-items: start;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 60;
+    height: 100vh;
+    overflow: auto;
+    border-radius: 10px;
+    border: none;
+    background: white;
+    animation-fill-mode: forwards;
+}
+
+.home-service::-webkit-scrollbar{
+    display: none;
+}
+
+.home-service.showHomeService{
+    animation-name: bukaHomeService;
+    animation-duration: 1.5s;
+    display: grid;
+}
+
+@keyframes bukaHomeService{
+    0%{
+        height: 0;
+        transform: translateY(100%);
+    }
+
+    100%{
+        height: 100vh;
+        transform: translateY(0);
+    }
+}
+
+.home-service.backHomeService{
+    display: none;
+    animation-duration: 1.5s;
+    animation-name: tutupHomeService;
+}
+
+@keyframes tutupHomeService {
+    0%{
+        height: 100vh;
+        transform: translateY(0);
+    }
+
+    100%{
+        height: 0;
+        transform: translateY(100%);
+    }
+}
+
+.container-home-service{
+    display: grid;
+    position: relative;
+    border: none;
+    background: transparent;
+    position: relative;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+    transform: translateY(100px);
+}
+
+.container-home-about-service{
+    display: none;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    position: relative;
+    border: none;
+    background: transparent;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.container-home-about-service.showAboutService{
+    display: grid;
+    animation-name: animasiAboutService;
+}
+
+@keyframes animasiAboutService{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+.container-home-about-service.showAboutService .aboutService{
+    opacity: 0;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-name: animasiMemanjangAbout;
+}
+
+.container-home-about-service.showAboutService .aboutService:nth-child(1){
+    animation-delay: .4s;
+}
+
+.container-home-about-service.showAboutService .aboutService:nth-child(2){
+    animation-delay: .6s;
+}
+
+@keyframes animasiMemanjangAbout{
+    0%{
+        opacity: 0;
+        width: 0;
+    }
+
+    100%{
+        opacity: 1;
+        width: 650px;
+    }
+}
+
+.bt-close-home-service{
+    display: grid;
+    justify-content: right;
+    align-items: center;
+    text-align: right;
+    position: relative;
+    border: none;
+    width: 100%;
+    background: transparent;
+    right: 20px;
+    padding: 10px;
+    bottom: 0;
+    z-index: 100;
+}
+
+.bt-close-home-service button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: right;
+    width: 70px;
+    height: 70px;
+    border: none;
+    font-size: 2rem;
+    border: none;
+    z-index: 5;
+    position: relative;
+    border-radius: 15px;
+    color: white;
+    transition: .6s ease;
+    background: #070021;
+}
+
+.bt-close-home-service button:hover,
+.bt-close-home-service button:focus{
+    background: #1d0085;
+}
+
+.header-home-service{
+    display: flex;
+    top: 0;
+    gap: 10px;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    position: fixed;
+    padding: 10px;
+    z-index: 10;
+    width: 100%;
+    border: none;
+    background: #9b0808;
+}
+
+.header-home-service h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    text-align: center;
+    position: relative;
+    border: none;
+    color: white;
+}
+
+.header-home-service img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    position: relative;
+    border: none;
+    background: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+}
+
+.aboutService{
+    display: grid;
+    position: relative;
+    border: none;
+    align-items: center;
+    background: transparent;
+    gap: 5px;
+}
+
+.container-service-kiri{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    position: relative;
+    border: none;
+    background: transparent;
+}
+
+.Servicekiri{
+    justify-content: left;
+    align-items: center;
+    display: grid;
+    width: 650px;
+    text-align: left;
+    position: relative;
+    border: none;
+    border-radius: 0 30% 30% 0;
+    background: #969696;
+    padding: 10px;
+}
+
+.Servicekiri h2::before{
+    content: "";
+    position: absolute;
+    border-bottom: 5px solid #070021;
+    display: flex;
+    bottom: 0;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    width: 30%;
+}
+
+.Servicekiri h2,
+.Servicekiri p
+{
+    color: #070021;
+}
+
+.Servicekiri i,
+.Servicekanan i{
+    color: white;
+    background: #ff4500;
+    border-radius: 10px;
+}
+
+.Servicekiri h2,
+.Servicekiri p,
+.Servicekiri i{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    font-size: 2rem;
+    padding: 5px;
+    position: relative;
+    border: none;
+}
+
+.container-service-kanan{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+    align-items: center;
+    text-align: right;
+    position: relative;
+    border: none;
+    background: transparent;
+}
+
+.Servicekanan{
+    justify-content: right;
+    align-items: center;
+    text-align: right;
+    display: grid;
+    width: 650px;
+    border: none;
+    position: relative;
+    border-radius: 30% 0 0 30%;
+    background: #070021;
+    padding: 10px;
+}
+
+.Servicekanan h2::before{
+    content: "";
+    position: absolute;
+    border-bottom: 5px solid #ffffff;
+    display: flex;
+    bottom: 0;
+    justify-content: right;
+    align-items: center;
+    text-align: right;
+    width: 30%;
+}
+
+.Servicekanan h2{
+    color: #c81d1d;
+}
+
+.Servicekanan ol{
+    display: grid;
+    justify-content: right;
+    align-items: center;
+    text-align: right;
+    width: 100%;
+    position: relative;
+    border: none;
+    background: transparent;
+}
+
+.Servicekanan ol li{
+    color: white;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    text-align: right;
+    position: relative;
+    font-size: 2rem;
+    background: transparent;
+    border: none;
+}
+
+.Servicekanan h2,
+.Servicekanan p,
+.Servicekanan i{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    text-align: right;
+    font-size: 2rem;
+    padding: 5px;
+    position: relative;
+    border: none;
+}
+
+@media screen and (max-width: 768px) {
+
+    .Servicekiri,
+    .Servicekanan{
+        width: 100%;
+    }
+
+    @keyframes animasiMemanjangAbout{
+        0%{
+            opacity: 0;
+            width: 0;
+        }
+    
+        100%{
+            opacity: 1;
+            width: 100%;
+        }
+    }
+
+    .Servicekiri h2{
+        font-size: 2rem;
+    }
+
+    .Servicekiri p{
+        font-size: 1.5rem;
+    }
+
+    .Servicekanan h2{
+        font-size: 2rem;
+    }
+
+    .Servicekanan ol li{
+        font-size: 1.5rem;
+    }
+
+    .Servicekanan i{
+        font-size: 1.5rem;
+    }
+
+}

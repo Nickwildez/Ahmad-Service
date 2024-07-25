@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/home-cuci-ac.css">
+    <link rel="stylesheet" href="/css/home-service.css">
+    <link rel="stylesheet" href="/css/home-pesan-jasa.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="icon" type="image/png" href="image/electrician.png">
+    <title>Ahmad Service</title>
+</head>
+
+<body>
+    <header class="header-top">
+        <section class="container-top-header">
+            <div class="text-header">
+                <i>selamat datang di</i>
+
+                <div class="h2-typing">
+                    <h2>jasa service elektronik.</h2>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <section class="home-pembukaan">
+        <div class="container-pembukaan">
+            <div class="box-h-pembukaan">
+
+                <div class="h1-pembukaan">
+                    <h1>jasa service.</h1>
+                </div>
+
+                <div class="h2-pembukaan">
+                    <h2>alat elektronik.</h2>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="home-pembukaan-2">
+        <div class="container-pembukaan-2">
+            <div class="box-h-pembukaan-2">
+                <h1>selamat datang di</h1>
+                <h2>jasa service elektronik</h2>
+                <p>kami melayani semua perbaikan pada alat elektronik rumah</p>
+            </div>
+
+            <div class="box-bt-pembukaan-2">
+                <button type="button" id="button-clear-pembukaan2" onclick="howToPageBegining()"
+                    class="fa-solid fa-arrow-right-to-bracket"></button>
+            </div>
+        </div>
+    </section>
+
+    <section class="home-page-begining">
+        <div class="container-homePage-begining">
+
+            <div class="h2-home-page-begining">
+                <h2>informasi jasa</h2>
+            </div>
+
+            <div class="box-information">
+                <button type="button" class="bt-information cuci-ac" onclick="openHomecuciAc()">
+                    <div class="container-bt-p-img">
+                        <p>AC</p>
+                        <div class="box-img-begining">
+                            <img src="image/air-conditioner (1).png" alt="">
+                        </div>
+                    </div>
+                </button>
+
+                <button type="button" class="bt-information service" onclick="openHomeService()">
+                    <div class="container-bt-p-img">
+                        <p>service</p>
+                        <div class="box-img-begining">
+                            <img src="image/electrician.png" alt="">
+                        </div>
+                    </div>
+                </button>
+
+                <button type="button" class="bt-information sewa-sound" onclick="">
+                    <div class="container-bt-p-img">
+                        <p>sewa sound system</p>
+                        <div class="box-img-begining">
+                            <img src="image/loudspeaker.png" alt="">
+                        </div>
+                    </div>
+                </button>
+
+                <button type="button" class="bt-information  pesan-jasa" onclick="openHomePesanJasa()">
+                    <div class="container-bt-p-img">
+                        <p>pesan jasa?</p>
+                        <div class="box-img-begining">
+                            <img src="image/notePesanan.png" alt="">
+                        </div>
+                    </div>
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="home-cuci-ac">
+        <header class="header-home-cuciAc">
+            <h2>cuci AC</h2>
+            <img src="image/air-conditioner (1).png" alt="">
+        </header>
+        <div class="container-home-cuci-ac">
+
+            <div class="container-Boxabout">
+
+                <div class="container-information-kiri">
+                    <div class="Boxabout kiri">
+                        <h2>jasa cuci AC</h2>
+                        <p>kami melayani jasa pembersihan AC mulai dari indoor & outdoor</p>
+                        <i>mulai dari rp.85.000</i>
+                    </div>
+                </div>
+
+                <div class="container-information-kanan">
+                    <div class="Boxabout kanan">
+                        <h2>jasa masang ac</h2>
+                        <p>kami melayani juga jasa memasang AC mulai dari indoor & outdoor</p>
+                        <i>mulai dari rp.350.000</i>
+                    </div>
+                </div>
+
+                <div class="container-information-kiri">
+                    <div class="Boxabout kiri">
+                        <h2>jasa pindah posisi AC</h2>
+                        <p>kami juga melayani jasa perpindahan AC dari indoor & outdoor, serta pengisian FREON R32, 22
+                        </p>
+                        <i>mulai dari rp.250.000</i>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="bt-close-home-ac">
+                <button type="button" onclick="clearHomeCuciAc()" class="fa-solid fa-arrow-right-to-bracket"></button>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="home-service">
+        <header class="header-home-service">
+            <h2>service</h2>
+            <img src="image/electrician.png" alt="">
+        </header>
+        <div class="container-home-service">
+
+            <div class="container-home-about-service">
+
+                <div class="container-service-kiri">
+                    <div class="aboutService Servicekiri">
+                        <h2>jasa service elektronik</h2>
+                        <p>kami melayani perbaikan service berbagai alat elektronik atau elektronik rumah tangga</p>
+                    </div>
+                </div>
+
+                <div class="container-service-kanan">
+                    <div class="aboutService Servicekanan">
+                        <h2>beberapa contoh alat elektronik</h2>
+                        <ol type="1">
+                            <li>TV berbagai model</li>
+                            <li>Mesin cuci 1/2 tabung</li>
+                            <li>Kipas angin</li>
+                            <li>Soundsystem</li>
+                            <li>AC</li>
+                            <li>Kulkas 1/2 pintu</li>
+                            <li>Berbagai elektronik lainnya</li>
+                        </ol>
+
+                        <i>untuk harga itu tergantung pada kerusakan pada alat elektronik tersebut</i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bt-close-home-service">
+                <button type="button" onclick="clearHomeService()" class="fa-solid fa-arrow-right-to-bracket"></button>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="home-pesan-jasa">
+        <header class="header-pesan-jasa">
+            <h2>pesan jasa?</h2>
+            <img src="image/notePesanan.png" alt="">
+        </header>
+
+        <div class="container-pesan-jasa">
+
+            <form action="" class="form-ac" id="form-ac">
+
+                <div class="box-h2-form-ac">
+                    <div class="h2-form-ac">
+                        <h2>jasa AC</h2>
+                        <img src="image/air-conditioner (1).png" alt="">
+                    </div>
+                </div>
+
+                <div class="box-pesan-jasa">
+                    <label>
+                        <input type="radio" name="jasa-ac" value="cuci AC" class="input-radio">cuci AC
+                    </label>
+
+                    <label>
+                        <input type="radio" name="jasa-ac" value="masang AC" class="input-radio">masang AC
+                    </label>
+
+                    <label>
+                        <input type="radio" name="jasa-ac" value="pindah AC" class="input-radio">pindah AC
+                    </label>
+                </div>
+
+                <div class="box-text-jasa-ac">
+                    <div class="container-input-jasa-ac">
+                        <label for="" class="label label-1">ada keluhan lain?</label>
+                        <input type="text" class="text-jasa-ac" placeholder="(opsional)">
+                    </div>
+
+                    <div class="container-input-jasa-ac">
+                        <label for="" class="label label-2">kuantitas:</label>
+                        <input type="number" class="text-jasa-ac nomer" placeholder="(wajib)" required>
+                    </div>
+
+                    <div class="container-input-jasa-ac">
+                        <label for="" class="label label-3">atas nama:</label>
+                        <input type="text" class="text-jasa-ac" placeholder="(wajib)" required>
+                    </div>
+
+                    <div class="container-input-jasa-ac">
+                        <label for="" class="label label-4">alamat / link maps:</label>
+                        <input type="text" class="text-jasa-ac" placeholder="(wajib)" required>
+                    </div>
+
+                    <div class="box-submit-ac">
+                        <button type="reset" class="fa-solid fa-arrow-rotate-left"></button>
+                        <button type="submit" class="fa-solid fa-clipboard-check"></button>
+                    </div>
+                </div>
+            </form>
+
+            <form action="" class="form-service" id="form-service">
+                <div class="box-h2-form-service">
+                    <div class="h2-form-service">
+                        <h2>jasa service</h2>
+                        <img src="image/electrician.png" alt="">
+                    </div>
+                </div>
+
+                <div class="box-text-jasa-service">
+                    <div class="container-input-jasa-service">
+                        <label for="" class="label label-1">nama barang:</label>
+                        <input type="text" class="text-jasa-service" placeholder="(wajib)">
+                    </div>
+
+                    <div class="container-input-jasa-service">
+                        <label for="" class="label label-2">ada keluhan lain?</label>
+                        <input type="text" class="text-jasa-service" placeholder="(opsional)">
+                    </div>
+
+                    <div class="container-input-jasa-service">
+                        <label for="" class="label label-3">kuantitas:</label>
+                        <input type="number" class="text-jasa-service nomer" placeholder="(wajib)" required>
+                    </div>
+
+                    <div class="container-input-jasa-service">
+                        <label for="" class="label label-4">atas nama:</label>
+                        <input type="text" class="text-jasa-service" placeholder="(wajib)" required>
+                    </div>
+
+                    <div class="container-input-jasa-service">
+                        <label for="" class="label label-5">alamat / link maps:</label>
+                        <input type="text" class="text-jasa-service" placeholder="(wajib)" required>
+                    </div>
+
+                    <div class="box-submit-ac">
+                        <button type="reset" class="fa-solid fa-arrow-rotate-left"></button>
+                        <button type="submit" class="fa-solid fa-clipboard-check"></button>
+                    </div>
+                </div>
+            </form>
+
+            <div class="bt-close-home-pesan-jasa">
+                <button type="button" onclick="clearHomePesanJasa()"
+                    class="fa-solid fa-arrow-right-to-bracket"></button>
+            </div>
+        </div>
+    </section>
+
+    <section class="tabel-jadwal-kerja">
+        <div class="container-tabel-jadwal">
+            <div class="h2-tabel">
+                <h2>jadwal kerja</h2>
+            </div>
+
+            <div class="box-tabel">
+                <table class="table-jam-kerja">
+                    <tr>
+                        <th class="tab-head">hari</th>
+                        <th class="tab-head">jam kerja</th>
+                    </tr>
+
+                    <tr>
+                        <td>senin</td>
+                        <td>08:00 - 19:00</td>
+                    </tr>
+
+                    <tr>
+                        <td>selasa</td>
+                        <td>08:00 - 19:00</td>
+                    </tr>
+
+                    <tr>
+                        <td>rabu</td>
+                        <td>08:00 - 19:00</td>
+                    </tr>
+
+                    <tr>
+                        <td>kamis</td>
+                        <td>08:00 - 19:00</td>
+                    </tr>
+
+                    <tr>
+                        <td>jumat</td>
+                        <td>08:00 - 19:00</td>
+                    </tr>
+
+                    <tr>
+                        <td>sabtu</td>
+                        <td>08:00 - 19:00</td>
+                    </tr>
+
+                    <tr>
+                        <td>minggu</td>
+                        <td>08:00 - 19:00</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <footer class="home-footer">
+        <div class="container-footer">
+            <div class="box-text-footer">
+                <h2>layanan service elektronik</h2>
+                <p>erima kasih telah mempercayakan kebutuhan service elektronik Anda kepada kami. Hubungi kami untuk
+                    layanan terbaik.</p>
+            </div>
+
+            <div class="box-name-dev">
+                <h2>DEV: </h2>
+                <i>M.Farrel Dwi Andhika</i>
+            </div>
+
+            <div class="box-maps-dev">
+                
+            </div>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+
+</html>

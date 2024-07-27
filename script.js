@@ -29,8 +29,12 @@ function howToPageBegining() {
     HomeFooter.classList.add("showHomeFooter");
 }
 
+let scrollPosition = 0;
+
 function openHomecuciAc() {
     const showHomeCuciAc = document.querySelector(".home-cuci-ac");
+    scrollPosition = window.scrollY;
+    document.body.style.overflow = "hidden"
     showHomeCuciAc.style.display = "grid";
     showHomeCuciAc.classList.add("showHomeCuciAc");
     showHomeCuciAc.classList.remove("backHomeCuciAc");
@@ -56,6 +60,8 @@ function clearHomeCuciAc() {
     showHomeCuciAc.addEventListener("animationend", () => {
         if (!showHomeCuciAc.classList.contains("showHomeCuciAc")) {
             showHomeCuciAc.style.display = "none";
+            document.body.style.overflow = "auto";
+            window.scrollTo(0, scrollPosition);
         }
     }, { once: true });
 
@@ -69,6 +75,8 @@ function clearHomeCuciAc() {
 
 function openHomeService() {
     const showHomeService = document.querySelector(".home-service");
+    scrollPosition = window.scrollY;
+    document.body.style.overflow = "hidden";
     showHomeService.style.display = "grid";
     showHomeService.classList.add("showHomeService");
     showHomeService.classList.remove("backHomeService");
@@ -93,6 +101,8 @@ function clearHomeService() {
     showHomeService.addEventListener("animationend", () => {
         if (!showHomeService.classList.contains("showHomeService")) {
             showHomeService.style.display = "none";
+            document.body.style.overflow = "auto";
+            window.scrollTo(0, scrollPosition);
         }
     }, { once: true });
 
@@ -106,6 +116,8 @@ function clearHomeService() {
 
 function openHomePesanJasa() {
     const homePesanJasa = document.querySelector(".home-pesan-jasa");
+    scrollPosition = window.scrollY;
+    document.body.style.overflow = "auto";
     homePesanJasa.style.display = "grid";
     homePesanJasa.classList.add("showHomePesanJasa");
     homePesanJasa.classList.remove("backHomePesanJasa");
@@ -134,6 +146,8 @@ function clearHomePesanJasa() {
     homePesanJasa.addEventListener("animationend", () => {
         if (!homePesanJasa.classList.contains("showHomePesanJasa")) {
             homePesanJasa.style.display = "none";
+            document.body.style.overflow = "auto";
+            window.scrollTo(0, scrollPosition);
         }
     }, { once: true })
 

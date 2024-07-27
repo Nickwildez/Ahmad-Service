@@ -819,22 +819,23 @@ td:focus {
 
 .box-text-footer h2{
     display: flex;
-    justify-content: center;
+    justify-content: left;
     text-align: left;
     align-items: center;
     position: relative;
     background: transparent;
     color: white;
     border: none;
-    width: 70%;
+    width: 50%;
 }
 
 .box-text-footer p{
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: start;
     text-align: left;
     position: relative;
+    width: 50%;
     border: none;
     background: transparent;
     color: white;
@@ -851,7 +852,7 @@ td:focus {
     padding: 10px;
     border-right: 3px solid white;
     border-left: 3px solid white;
-    background: transparent;
+    background: #070021;
 }
 
 .box-name-dev h2{
@@ -879,11 +880,17 @@ td:focus {
 }
 
 @media screen and (max-width: 768px) {
-    h1-pembukaan h1 {
+    .h1-pembukaan h1 {
         font-size: 2.2rem;
     }
 
-    h2-pembukaan h2 {
+    .h2-pembukaan h2 {
         font-size: 2rem;
+    }
+
+    .box-text-footer h2,
+    .box-text-footer p
+    {
+        width: 90%;
     }
 }

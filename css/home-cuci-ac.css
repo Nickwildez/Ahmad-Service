@@ -24,7 +24,7 @@
     top: 0;
     z-index: 60;
     height: 100vh;
-    overflow: auto;
+    overflow-y: scroll;
     border-radius: 10px;
     border: none;
     background: white;
@@ -271,7 +271,15 @@
 .kanan i{
     color: white;
     background: #ff4500;
-    border-radius: 10px;
+    width: auto;
+}
+
+.kiri i{
+    border-radius: 10px 10px 70px 10px;
+}
+
+.kanan i{
+    border-radius: 10px 10px 10px 70px;
 }
 
 .kiri h2,

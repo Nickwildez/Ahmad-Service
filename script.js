@@ -6,6 +6,31 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 6000);
 });
 
+window.addEventListener("load", function () {
+    function updateOnlineStatus() {
+        var statusOffline = document.querySelector(".home-koneksi-internet");
+        var homePembukaan = document.querySelector(".home-pembukaan");
+        var homePembukaan2 = document.querySelector(".home-pembukaan-2");
+
+        if (navigator.onLine) {
+            statusOffline.style.display = "none";
+            homePembukaan.style.display = "grid";
+            homePembukaan2.style.display = "grid";
+        } else {
+            statusOffline.style.display = "grid";
+            homePembukaan.style.display = "none";
+            homePembukaan2.style.display = "none";
+        }
+    }
+
+    window.addEventListener("online", updateOnlineStatus);
+    window.addEventListener("offline", updateOnlineStatus);
+    updateOnlineStatus();
+});
+
+function refreshPage() {
+    location.reload();
+}
 
 function howToPageBegining() {
     const homePembukaan2 = document.querySelector(".home-pembukaan-2");

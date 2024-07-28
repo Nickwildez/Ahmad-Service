@@ -142,7 +142,7 @@ function clearHomeService() {
 function openHomePesanJasa() {
     const homePesanJasa = document.querySelector(".home-pesan-jasa");
     scrollPosition = window.scrollY;
-    document.body.style.overflow = "auto";
+    document.body.style.overflow = "hidden";
     homePesanJasa.style.display = "grid";
     homePesanJasa.classList.add("showHomePesanJasa");
     homePesanJasa.classList.remove("backHomePesanJasa");

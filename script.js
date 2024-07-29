@@ -29,7 +29,17 @@ window.addEventListener("load", function () {
 });
 
 function refreshPage() {
-    location.reload();
+    if (navigator.onLine) {
+        location.reload();
+    } else {
+        var statusOffline = document.querySelector(".home-koneksi-internet");
+        var homePembukaan = document.querySelector(".home-pembukaan");
+        var homePembukaan2 = document.querySelector(".home-pembukaan-2");
+
+        statusOffline.style.display = "grid";
+        homePembukaan.style.display = "none";
+        homePembukaan2.style.display = "none";
+    }
 }
 
 function howToPageBegining() {

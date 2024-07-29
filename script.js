@@ -6,6 +6,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 6000);
 });
 
+let refreshClicked = false;
+
 window.addEventListener("load", function () {
     function updateOnlineStatus() {
         var statusOffline = document.querySelector(".home-koneksi-internet");
@@ -29,6 +31,7 @@ window.addEventListener("load", function () {
 });
 
 function refreshPage() {
+    refreshClicked = true;
     if (navigator.onLine) {
         location.reload();
     } else {
